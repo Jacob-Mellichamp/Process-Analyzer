@@ -20,11 +20,11 @@ void setDebug(bool);
 
 // Get a Process Name from PID
 //extern "C" __declspec(dllexport) std::string GetProcessName(DWORD pid);
-std::string GetProcessName(DWORD pid);
+//std::string GetProcessName(DWORD pid);
 
 //Get all Processes currently Running
 //extern "C" __declspec(dllexport) std::vector<ProcessInfo> GetAllProcessSnapShot();
-std::vector<ProcessInfo> GetAllProcessSnapShot();
+//std::vector<ProcessInfo> GetAllProcessSnapShot();
 
 
 // Experiment #2
@@ -39,10 +39,17 @@ class ProcessQuery {
     DWORD parent_pid;
 };
 
-class ProcessQueryList {
-  public:
-    ProcessQueryList();
-    void addItem(ProcessQuery);
-  private:
-    std::vector<ProcessQuery> data;
-};
+
+
+// exported Libaries to be used. 
+
+// Get a Process Name from PID
+extern "C" __declspec(dllexport) const char* GetProcessName(DWORD pid);
+//
+//class ProcessQueryList {
+//  public:
+//    ProcessQueryList();
+//    void addItem(ProcessQuery);
+//  private:
+//    std::vector<ProcessQuery> data;
+//};

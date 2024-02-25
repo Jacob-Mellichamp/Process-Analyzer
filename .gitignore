@@ -1,3 +1,5 @@
 .vs/
 build/
 out/
+src/gui/Process_Analyzer_gui/Process_Analyzer_gui/obj
+src/gui/Process_Analyzer_gui/Process_Analyzer_gui/bin

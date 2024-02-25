@@ -26,10 +26,14 @@ int main(int ARGC, char *ARGV[]) {
 
   // Start of actual Logic
   DWORD pid = std::stoul(ARGV[1]);
-  std::vector<ProcessInfo> global_Processes = GetAllProcessSnapShot();
 
-  if (global_Processes.size() > 0) {
-      std::string myProcessName = GetProcessName(global_Processes[2].pid);
-  }
+  ProcessQuery* pq = new ProcessQuery();
+
+  std::cout << pq->GetName(pid) << std::endl;
+  //  std::vector<ProcessInfo> global_Processes = GetAllProcessSnapShot();
+  //
+  //  if (global_Processes.size() > 0) {
+  //      std::string myProcessName = GetProcessName(global_Processes[2].pid);
+  //  }
   return 0;
 }
